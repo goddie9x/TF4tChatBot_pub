@@ -20,6 +20,7 @@
     "*://*.free4talk.com/*",
     "https://generativelanguage.googleapis.com/*"
   ],
+  "options_page": "options.html",
   "action": {
     "default_popup": "popup.html"
   },
