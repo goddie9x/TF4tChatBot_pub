@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "TF4tChatBot",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "icons": {
+    "16": "assets/image/icon-16.png",
+    "32": "assets/image/icon-32.png",
+    "48": "assets/image/icon-48.png",
+    "192": "assets/image/icon-192.png"
+  },
+  "description": "Tạo bot riêng của bạn trên Free4talk...",
+  "host_permissions": [
+    "https://api.google.com/*",
+    "https://api.openai.com/*",
+    "*://*.free4talk.com/*",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
