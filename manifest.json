@@ -2,10 +2,14 @@
   "manifest_version": 3,
   "name": "TF4tChatBot",
   "version": "1.0",
+  "description": "Tạo bot riêng của bạn trên Free4talk...",
   "permissions": [
-    "storage",
-    "activeTab",
-    "scripting"
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.free4talk.com/*",
+    "https://api.mistral.ai/*",
+    "https://generativelanguage.googleapis.com/*"
   ],
   "icons": {
     "16": "assets/image/icon-16.png",
@@ -13,13 +17,6 @@
     "48": "assets/image/icon-48.png",
     "192": "assets/image/icon-192.png"
   },
-  "description": "Tạo bot riêng của bạn trên Free4talk...",
-  "host_permissions": [
-    "https://api.google.com/*",
-    "https://api.openai.com/*",
-    "*://*.free4talk.com/*",
-    "https://generativelanguage.googleapis.com/*"
-  ],
   "options_page": "options.html",
   "action": {
     "default_popup": "popup.html"
@@ -27,7 +24,7 @@
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "*://*.free4talk.com/*"
       ],
       "js": [
         "content.js"
